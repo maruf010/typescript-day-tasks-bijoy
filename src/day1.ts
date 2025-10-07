@@ -81,15 +81,15 @@ printLength("Maruf Hossain");
 printLength(12345);
 
 // Enum & Literal Type
-enum Role {
-  Admin,
-  User,
-  Guest,
-}
-let currentRole: Role = Role.Admin;
-if (currentRole === Role.Admin) {
-  console.log("Welcome, Admin!");
-}
+// enum Role {
+//   Admin,
+//   User,
+//   Guest,
+// }
+// let role: Role = Role.Admin;
+// if (role === Role.Admin) {
+//   console.log("Welcome, Admin!");
+// }
 
 // Literal Types
 type Status = "active" | "inactive" | "pending";
