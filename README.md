@@ -1,4 +1,4 @@
-# 🧠 Day 1 – TypeScript Basics Practice - Maruf Hossain Bijoy
+# Day 1 – TypeScript Basics Practice - Maruf Hossain Bijoy
 
 TypeScript-এর মৌলিক বিষয়গুলো — যেমন Type, Interface, Union, Generic
 
