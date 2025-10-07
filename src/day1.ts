@@ -6,13 +6,13 @@ interface User {
   active?: boolean;
 }
 
-const user1: User = {
+const user: User = {
   name: "Maruf",
   email: "mhbijoy013@gmail.com",
   phone: "01713847702",
   active: true,
 };
-console.log(user1);
+console.log(user);
 
 //Union & Type Narrowing
 function handleInput(input: number | string) {
@@ -70,3 +70,47 @@ const updateUser: Partial<User> = {
 console.log(updateUser);
 
 // Type Assertion & Casting
+function printLength(value: unknown) {
+  if (typeof value === "string") {
+    console.log("String Length:", (value as string).length);
+  } else {
+    console.log("Not a string");
+  }
+}
+printLength("Maruf Hossain");
+printLength(12345);
+
+// Enum & Literal Type
+enum Role {
+  Admin,
+  User,
+  Guest,
+}
+let currentRole: Role = Role.Admin;
+if (currentRole === Role.Admin) {
+  console.log("Welcome, Admin!");
+}
+
+// Literal Types
+type Status = "active" | "inactive" | "pending";
+let userStatus: Status = "pending";
+console.log(userStatus);
+
+// Function Return Type Practice
+interface User {
+  name: string;
+  email: string;
+}
+
+async function getUsers(): Promise<User[]> {
+  return [
+    { name: "Maruf", email: "mhbijoy013@gmail.com" },
+    { name: "Sajib", email: "sajib@example.com" },
+  ];
+}
+
+async function showUsers() {
+  const users = await getUsers();
+  console.log(users);
+}
+showUsers();
